@@ -14,13 +14,14 @@ const images = [
 ];
 
 const galleryEl = document.querySelector(".gallery");
+galleryEl.classList.add("list", "card-set");
 
 const makeItemImageMarkup = ({ url, alt }) => {
-  return `<li>
-        <img src=${url} alt=${alt}>
+  return `<li class='item'>
+        <img src=${url} alt=${alt} width=320 height=200>
       </li>`;
 };
 
 const makeItemImage = images.map(makeItemImageMarkup).join("");
 
-galleryEl.insertAdjacentHTML("beforebegin", makeItemImage);
+galleryEl.insertAdjacentHTML("afterbegin", makeItemImage);
