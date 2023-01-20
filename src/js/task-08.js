@@ -10,7 +10,7 @@ function onFormSubmit(event) {
   const password = formElements.password.value;
 
   if (email === "" || password === "") {
-    alert("Заполните все поля!");
+    alert("Заповніть всі поля!");
     return;
   }
 
